@@ -13,5 +13,10 @@
   Localidade: <%= @job.location %>
 </p>
 <p>
+  <% if @job.featured %>
+      <strong>Destaque</strong>
+  <% end %>
+</p>
+<p>
   <%= link_to 'Voltar', root_path %>
 </p>
