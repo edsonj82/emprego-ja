@@ -1,22 +1,18 @@
-<h3>Empregos Ja</h3>
+<h3> Empregos Já</h3>
 <h1><%= @job.title %></h1>
-<p>
-  Categoria: <%= @job.category %>
-</p>
-<p>
-  Empresa: <%= @job.company %>
-</p>
-<p>
-  Descricao: <%= @job.description %>
-</p>
-<p>
-  Localidade: <%= @job.location %>
-</p>
-<p>
-  <% if @job.featured %>
-      <strong>Destaque</strong>
-  <% end %>
-</p>
-<p>
-  <%= link_to 'Voltar', root_path %>
-</p>
+<div class="information">
+  <span>Categoria:</span><%= @job.category %>
+</div>
+<div class="information">
+  <span>Empresa:</span><%= @job.company.name %>
+</div>
+<div class="information">
+  <span>Descrição:</span><%= @job.description %>
+</div>
+<div class="information">
+  <span>Localização:</span><%= @job.location %>
+</div>
+<% if @job.featured %>
+  <strong>Destaque</strong>
+<% end %>
+<%= link_to 'Voltar', root_path %>
