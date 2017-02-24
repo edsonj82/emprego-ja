@@ -1,5 +1,8 @@
 <%= form_for @job do |f| %>
 <p>
+  <h1><%= notice %></h1>
+</p>
+<p>
   <%= f.label :title, 'Título' %><br>
   <h1><%= f.text_field :title %></h1>
 </p>
