@@ -1,0 +1,26 @@
+<%= form_for @job do |f| %>
+  <h1><%= notice %></h1>
+<p>
+  <%= f.label :title, 'Título' %>
+  <%= f.text_field :title %>
+</p>
+<p>
+  <%= f.label :location, 'Local' %>
+  <%= f.text_field :location %>
+</p>
+<p>
+  <%= f.label :category, 'Categoria' %>
+  <%= f.text_field :category %>
+</p>
+<p>
+  <%= f.label :company_id, 'Empresa' %><br>
+  <%= f.collection_select(:company_id, @companies, :id, :name) %>
+</p>
+<p>
+  <%= f.label :description, 'Descrição' %>
+  <%= f.text_field :description %>
+</p>
+<p>
+  <%= f.submit 'Atualizar Vaga' %>
+</p>
+<% end %>
